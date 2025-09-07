@@ -1,0 +1,38 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args){
+        int count=0;
+        int i;
+       // boolean correct = false;
+        System.out.println("Set the target number Between 1-100 :");
+        Scanner sc=new Scanner(System.in);
+        int T=sc.nextInt();
+        System.out.println("Guess the Target number :");
+        for(i=0;i<5;i++){
+            Scanner se=new Scanner(System.in);
+            int G=se.nextInt();
+            count++;
+            if(T==G) {
+                System.out.println("Guess is correct!!");
+                //break;
+               // correct= true;
+                break;
+            }
+            else if(G<T) {
+                System.out.println("Guess is too low..");
+            }
+            else {
+                System.out.println(" Guess is too high..");
+            }
+        }
+    //  if (! correct) {
+       // int i;
+        if(i==5){
+            
+            System.out.println("Limit reached..Game over..!!");
+        }
+        //System.out.println("Limit reached..Game over..!!");
+//score=5-count;
+System.out.println("Score based on number of attempts taken :.." + (5-count));
+}
+}
